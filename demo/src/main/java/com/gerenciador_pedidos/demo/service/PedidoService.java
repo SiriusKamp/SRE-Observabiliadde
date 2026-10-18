@@ -123,7 +123,7 @@ Pedido pedido = optional.get();
 pedido.setConcluido(true);
 pedido.setStatus("CANCELADO");
 pedido.setConcluidaEm(System.currentTimeMillis());
-pedidosConcluidos.increment();
+pedidosCancelados.increment();
 return repository.save(pedido);
 } catch (Exception e) {
 pedidosErro.increment();
